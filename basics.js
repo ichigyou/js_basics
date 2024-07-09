@@ -97,3 +97,25 @@ console.log(schools);
 for (let i =0; i<schools.length; i++) {
     console.log(schools[i])
 }
+
+// Objects (like dictionaries in python)
+let person = {
+    firstName: "balls",
+    lastName: "wiener",
+    age: 17,
+    isStudent: false
+};
+
+person["age"] = 18;
+person["isStudent"] = true
+console.log(person.age)
+console.log(person["firstName"], person["lastName"]);
+
+// Functions
+function cube(x) {
+    return x ** 3;
+}
+
+// Arrow functions (shorter)
+let magnitude = (x, y, z) => Math.sqrt(x**2 + y**2 + z**2);
+console.log(magnitude(3,4,5))
