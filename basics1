@@ -22,3 +22,32 @@ let dateStr = now.toLocaleDateString();
 let timeStr = now.toLocaleTimeString();
 document.getElementById("datetime").innerHTML = "Date: <b>" + dateStr + "</b><br>";
 document.getElementById("datetime").innerHTML += "Time: <b>" + timeStr + "</b><br>";
+
+//step 1: Identify element by id
+const header = document.getElementById("header")
+const button = document.getElementById("colorbutton");
+
+//step 2: Define an array of colors
+const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+
+let index = 0;
+
+// Step 3: Define the function that will run when the button is clicked
+function changeColor() {
+	header.style.backgroundColor = colors[index];
+	index ++;
+	if (index >= colors.length){
+		index = 0;
+	}
+}
+
+// Step 4: Add event listener to button
+button.addEventListener("click", changeColor)
+
+// Step 5: Add mouseover and mouseout effects
+// Using nameless functions
+button.addEventListener("mouseover",function() {
+	button.style.backgroundColor = "teal";
+	button.style.color = "orange";
+	button.textContent = "Click Me !!!"
+};
